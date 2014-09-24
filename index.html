@@ -10,38 +10,34 @@
 
 		
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/reset.css"/>
+		<link rel="stylesheet" href="styles/jquery-ui.min.css"/>
 		<link rel="stylesheet" href="styles/styles.css"/> 
 
 		<!-- JavaScript -->
 		<script src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/app2.js"></script>
 
 	
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="main-header">
-			
-					<h1><span class="hot"> Hot </span> or <span class="cold"> Cold </span></h1>
-			<div>
-
-	
-
-		<section class="game"> 
-		
-			<fieldset>
-				<input id="guess" type="text" name="userGuess" id="userGuess" class="text" maxlength="3" autocomplete="off" placeholder="Enter your Guess" required/>
-      			<input type="submit" id="guessButton" class="button" name="submit" value="Guess"/>
-			</fieldset>
-			
-      	<!--  	<p>Guess #<span id="count">0</span>!</p>
-			
-			<ul id="guessList" class="guessBox clearfix">
-
-			</ul> -->
-
-			</section>
+		<div class="center" id="main">
+		 <h1> <span class="hot"> Hot </span> OR <span class="cold"> Cold </span></h1>
+		<div id="playArea">
+			<span id="alert"></span>
+			<br> <input id="guess" type="text" name="yournumber" maxlength="2" autofocus><br>
+			<div class="button" id="pick">Guess</div>
+			<div class="button reset" >Start Over</div>
 		</div>
+
+		
+		<div id="bottom">
+	    	<p>Previous Guesses</p>
+			<ul id="lastpick">
+	    
+			</ul>
+	    </div>
+	</div>
 	</body>
 </html>

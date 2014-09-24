@@ -3,7 +3,6 @@ $(document).ready(function(){
 
 	function WinningNumberGenerator(){
 		WinningNumber = (Math.floor(Math.random()*100));
-		console.log("WinningNumber = " + WinningNumber);
 	}
 
 	WinningNumber();
@@ -11,6 +10,7 @@ $(document).ready(function(){
 	function inputNumber(){
 		var userNumber = Number($('#guess').val());
 	}
+	function difference(a,b) {return Math.abs(a - b)};
 
 	var subraction = difference(userNumber, WinningNumber);
 	var lastDifference = difference(lastNumber, WinningNumber);
@@ -60,6 +60,4 @@ function changeBackground(color) {
 	document.body.style.background = color;
 }
 
-
-
-
+	
