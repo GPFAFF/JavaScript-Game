@@ -21,7 +21,7 @@ $(document).ready(function(){
 		}
 		else if ((WinningNumber - userNumber) > 75){
 			document.body.style.background{
-				color; 
+				color(); 
 			}
 		}
 		else if ((WinningNumber - userNumber) > 65){
