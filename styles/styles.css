@@ -60,4 +60,11 @@ input#guessButton.button{
 	height: 5.7em;
 	border-radius: 4px 4px 4px;
 }
+.winner{
+	display: none;
+	height: 400px;
+	width: 400px;
+	z-index: 1;
+	background-color: green;
+}
 

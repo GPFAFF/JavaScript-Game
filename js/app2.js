@@ -23,13 +23,14 @@
 		function highLow(phrase){
 			$('#alert').html(phrase).hide().effect("slide", {direction: 'down', mode: 'show'}, 1000);
 		}
+		function changeBackground(color) {
+				document.body.style.background = color;
+		}
+
 
 		if(userNum == comNum){
 			$('#main').hide()
-			$('#winner').fadeIn(1000)
-			
-			tempChange(100,100, "Great Job!" );
-			$('.thermometer').fadeOut("slow")
+			$('.winner').fadeIn(1000)
 		}
 		else if (isNaN(userNum)){
 			highLow("Pick a number!")
@@ -45,28 +46,59 @@
 		};
 		
 		//where to change temperture based on distance of guess
-		if (diff < 5) {
-			tempChange(10,20, "Hot!");
-			changeBackground(red);
+		if (diff < 3){
+			$('#playArea').animate({
+				backgroundColor: "red" }, 1500);
+				console.log("schnarf");
+		}
+		else if (diff < 5) {
+			$('#playArea').animate({
+				backgroundColor: "green" }, 1500);
+							console.log("bacon");
+
 		}
 		else if (diff < 10){
-			tempChange(30,40, "Warm!");
-			changeBackground(orange);
-		}
-		else{
-			tempChange(70,80, "Cold!");
-			changeBackground(blue);
-		}
+			$('#playArea').animate({
+				backgroundColor: "orange" }, 1500);
+							console.log("eggs");
 
+		}
+		else if (diff < 20){
+			$('#playArea').animate({
+				backgroundColor: "blue" }, 1500);
+							console.log("beans");
+
+		}
+		else if (diff < 30){
+			$('#playArea').animate({
+				backgroundColor: "purple" }, 1500);
+							console.log("beers");
+
+		}
+		else if (diff < 40){
+			$('#playArea').animate({
+				backgroundColor: "yellow" }, 1500);
+							console.log("yowza");
+
+		}
+		else if (diff < 50){
+			$('#playArea').animate({
+				backgroundColor: "pink" }, 1500);
+							console.log("Schmello");
+
+		}
+		else if (diff < 60){
+			$('#playArea').animate({
+				backgroundColor: "brown" }, 1500);
+							console.log("HIIIII");
+
+		}
+		
 	};
-
-	function changeBackground(color) {
-	document.body.style.background = color;
-}
 
 $(document).ready(function(){
 	//hides winner screen
-	$('#winner').hide()
+	$('.winner').hide()
 
 	$('#main').hide().fadeIn(3000)
 
