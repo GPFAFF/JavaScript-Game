@@ -64,6 +64,7 @@ input{
     width: 20%;
     margin: 10px auto;
     padding: 20px;
+    text-align: center;
  
 }
 input#guessButton.button{
