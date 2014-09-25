@@ -65,14 +65,16 @@ input{
     margin: 10px auto;
     padding: 20px;
     text-align: center;
+<<<<<<< HEAD
  
+=======
+>>>>>>> 84f5e6d861ff2161103f65cce1b986f8104262cd
 }
 input#guessButton.button{
 	padding: 20px;
 	width: 10em;
 	height: 5.7em;
 	border-radius: 4px 4px 4px;
-	text-align: center;
 }
 .winner{
 	display: none;
