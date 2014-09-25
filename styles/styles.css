@@ -64,14 +64,13 @@ input{
     width: 20%;
     margin: 10px auto;
     padding: 20px;
- 
+    text-align: center;
 }
 input#guessButton.button{
 	padding: 20px;
 	width: 10em;
 	height: 5.7em;
 	border-radius: 4px 4px 4px;
-	text-align: center;
 }
 .winner{
 	display: none;
