@@ -14,81 +14,77 @@
 		var diff = difference(userNum,comNum);
 		var diffLast = difference(lastNum,comNum);
 		
-		//Displays last picked number to user
+		//Shows Last Number Picked. 
 		function lastpick(number){
 			$("#lastpick").prepend("<li>" + number + "</li>").children(':first').hide().fadeIn(1000);
 
 		};
 		//alert to display to user
-		function highLow(phrase){
-			$('#alert').html(phrase).hide().effect("slide", {direction: 'down', mode: 'show'}, 1000);
+		function result(phrase){
+			$('#alert').html(phrase).show().effect("slide", {direction: 'up', mode: 'show'}, 1000);
 		}
-		function changeBackground(color) {
-				document.body.style.background = color;
-		}
-
 
 		if(userNum == comNum){
 			$('#main').hide()
-			$('.winner').fadeIn(1000)
+			$('.winner').fadeIn(3000)
 		}
 		else if (isNaN(userNum)){
-			highLow("Pick a number!")
+			result("Pick a number!")
 		}
 
 		else if (userNum > comNum) {
-			highLow("Guess Lower!")
+			result("Guess Lower!")
 			lastpick(userNum);
 		}
 		else{
-			highLow("Guess Higher!")
+			result("Guess Higher!")
 			lastpick(userNum);
 		};
 		
 		//where to change temperture based on distance of guess
 		if (diff < 3){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "red" }, 1500);
 				console.log("schnarf");
 		}
 		else if (diff < 5) {
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "green" }, 1500);
 							console.log("bacon");
 
 		}
 		else if (diff < 10){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "orange" }, 1500);
 							console.log("eggs");
 
 		}
 		else if (diff < 20){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "blue" }, 1500);
 							console.log("beans");
 
 		}
 		else if (diff < 30){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "purple" }, 1500);
 							console.log("beers");
 
 		}
 		else if (diff < 40){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "yellow" }, 1500);
 							console.log("yowza");
 
 		}
 		else if (diff < 50){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "pink" }, 1500);
 							console.log("Schmello");
 
 		}
 		else if (diff < 60){
-			$('#playArea').animate({
+			$('#main').animate({
 				backgroundColor: "brown" }, 1500);
 							console.log("HIIIII");
 
