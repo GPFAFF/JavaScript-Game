@@ -49,43 +49,43 @@
 		}
 		else if (diff < 5) {
 			$('#main').animate({
-				backgroundColor: "green" }, 1500);
+				backgroundColor: "#f6546a"}, 1500);
 							console.log("bacon");
 
 		}
 		else if (diff < 10){
 			$('#main').animate({
-				backgroundColor: "orange" }, 1500);
+				backgroundColor: "#f06d06" }, 1500);
 							console.log("eggs");
 
 		}
 		else if (diff < 20){
 			$('#main').animate({
-				backgroundColor: "blue" }, 1500);
+				backgroundColor: "#ff8c00" }, 1500);
 							console.log("beans");
 
 		}
 		else if (diff < 30){
 			$('#main').animate({
-				backgroundColor: "purple" }, 1500);
+				backgroundColor: "#7fffd4" }, 1500);
 							console.log("beers");
 
 		}
 		else if (diff < 40){
 			$('#main').animate({
-				backgroundColor: "yellow" }, 1500);
+				backgroundColor: "#0e77be" }, 1500);
 							console.log("yowza");
 
 		}
 		else if (diff < 50){
 			$('#main').animate({
-				backgroundColor: "pink" }, 1500);
+				backgroundColor: "#lf4f8f" }, 1500);
 							console.log("Schmello");
 
 		}
 		else if (diff < 60){
 			$('#main').animate({
-				backgroundColor: "brown" }, 1500);
+				backgroundColor: "blue" }, 1500);
 							console.log("HIIIII");
 
 		}
