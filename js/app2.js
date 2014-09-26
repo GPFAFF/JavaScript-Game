@@ -31,7 +31,7 @@
 			$('.winner').fadeIn(3000)
 		}
 		else if (isNaN(userNum)){
-			result("Pick a number!")
+			result("Numbers Only!")
 		}
 
 		else if (userNum > comNum) {
