@@ -1,31 +1,33 @@
-//computer picks random number
-	var comNum = Math.floor(Math.random()*101);
+//computer picks random number.
+	var comNum = Math.floor(Math.random()*100);
 	
 	function difference(a,b) {return Math.abs(a - b)};
 	
-	//main function to run after user has picked number
+	//Adding value to User guess.
 	function askNumber(){
 		var userNum = Number($('#guess').val());
 		
-		//captures value of last picked number
+		//Variable which adds number to the Selected number
 		var lastNum = $("#lastpick li").first().text();
 
-		//calculates difference between users number/com number and last picked number/com number
-		var diff = difference(userNum,comNum);
+		//difference between user number and computer number 
+		var subraction = difference(userNum,comNum);
+
+		//difference between computer number and last number to determine color
 		var diffLast = difference(lastNum,comNum);
 		
-		//Shows Last Number Picked. 
+		//Adds number to picked number list
 		function lastpick(number){
 			$("#lastpick").prepend("<li>" + number + "</li>").children(':first').hide().fadeIn(1000);
 
 		};
 		//alert to display to user
 		function result(phrase){
-			$('#alert').html(phrase).show().effect("slide", {direction: 'up', mode: 'show'}, 1000);
+			$('.alert').html(phrase).show().effect("slide", {direction: 'up', mode: 'show'}, 1000);
 		}
 
 		if(userNum == comNum){
-			$('#main').hide()
+			$('.main').hide()
 			$('.winner').fadeIn(3000)
 		}
 		else if (isNaN(userNum)){
@@ -33,72 +35,90 @@
 		}
 
 		else if (userNum > comNum) {
-			result("Guess Lower!")
+			result("Lower!")
 			lastpick(userNum);
 		}
 		else{
-			result("Guess Higher!")
+			result("Higher!")
 			lastpick(userNum);
 		};
 		
-		//where to change temperture based on distance of guess
-		if (diff < 3){
-			$('#main').animate({
+		//Gradient Color generator based on how close they are to comNum 
+		if ( subraction < 3){
+			$('.main').animate({
 				backgroundColor: "red" }, 1500);
 				console.log("schnarf");
 		}
-		else if (diff < 5) {
-			$('#main').animate({
+		else if (subraction < 5) {
+			$('.main').animate({
 				backgroundColor: "#f6546a"}, 1500);
 							console.log("bacon");
 
 		}
-		else if (diff < 10){
-			$('#main').animate({
+		else if (subraction < 10){
+			$('.main').animate({
 				backgroundColor: "#f06d06" }, 1500);
 							console.log("eggs");
 
 		}
-		else if (diff < 20){
-			$('#main').animate({
+		else if (subraction < 20){
+			$('.main').animate({
 				backgroundColor: "#ff8c00" }, 1500);
 							console.log("beans");
 
 		}
-		else if (diff < 30){
-			$('#main').animate({
+		else if (subraction < 30){
+			$('.main').animate({
 				backgroundColor: "#7fffd4" }, 1500);
 							console.log("beers");
 
 		}
-		else if (diff < 40){
-			$('#main').animate({
-				backgroundColor: "#0e77be" }, 1500);
+		else if (subraction < 40){
+			$('.main').animate({
+				backgroundColor: "#7EB6FF" }, 1500);
 							console.log("yowza");
 
 		}
-		else if (diff < 50){
-			$('#main').animate({
-				backgroundColor: "#lf4f8f" }, 1500);
+		else if (subraction < 50){
+			$('.main').animate({
+				backgroundColor: "#0e77be" }, 1500);
 							console.log("Schmello");
 
 		}
-		else if (diff < 60){
-			$('#main').animate({
+		else if (subraction < 60){
+			$('.main').animate({
+				backgroundColor: "#rgba(112, 119, 246, 1)" }, 1500);
+							console.log("turd");
+
+		}
+		else if (subraction < 70){
+			$('.main').animate({
+				backgroundColor: "#4876FF" }, 1500);
+							console.log("barf");
+
+		}
+		else if (subraction < 80){
+			$('.main').animate({
+				backgroundColor: "#003eff" }, 1500);
+							console.log("bro");
+
+		}
+		else if (subraction < 90){
+			$('.main').animate({
 				backgroundColor: "blue" }, 1500);
-							console.log("HIIIII");
+							console.log("bal");
 
 		}
 		
 	};
 
 $(document).ready(function(){
-	//hides winner screen
+	//On load hides winner screen. 
 	$('.winner').hide()
 
-	$('#main').hide().fadeIn(3000)
+	$('.main').hide().fadeIn(3000)
 
-	//enable enter button to submit
+	//Ability to hit enter 
 	$('#guess').keydown(function(event){    
     if(event.keyCode==13){
        $('#pick').trigger('click');
