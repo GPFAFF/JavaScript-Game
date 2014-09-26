@@ -28,7 +28,7 @@
 
 		if(userNum == comNum){
 			$('.main').hide()
-			$('.winner').fadeIn(3000)
+			$('.winner').fadeIn(1000)
 		}
 		else if (isNaN(userNum)){
 			result("Numbers Only!")
@@ -115,7 +115,6 @@
 $(document).ready(function(){
 	//On load hides winner screen. 
 	$('.winner').hide()
-
 	$('.main').hide().fadeIn(3000)
 
 	//Ability to hit enter 
